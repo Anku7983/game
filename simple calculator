@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int choice;
+    float a, b;
+    cout << "welcome to the simple claculator!! " << endl;
+
+    do
+    {
+        cout << "1: add (+) \n2: sub (-)\n3: multi (*)\n4: div (/)\n5: exit" << endl;
+        cout << "enter your choice which you want to perform operation  ";
+        cin >> choice;
+        if (choice == 5)
+        {
+            break;
+        }
+        cout << "enter two values " << endl;
+        cin >> a;
+        cin >> b;
+
+        switch (choice)
+        {
+        case 1:
+
+            cout << a << " + " << b << " = " << (a + b) << endl;
+            break;
+
+        case 2:
+
+            cout << a << " - " << b << " = " << (a - b) << endl;
+            break;
+
+        case 3:
+
+            cout << a << " * " << b << " = " << (a * b) << endl;
+            break;
+
+        case 4:
+            if (b != 0)
+            {
+                cout << a << " / " << b << " = " << (a / b) << endl;
+            }
+            else
+            {
+                cout << "Error division by zero " << endl;
+            }
+
+            break;
+
+        case 5:
+            cout << "exit";
+            break;
+
+        default:
+            cout << "please enter a valid choice ";
+        }
+
+    } while (choice != 5);
+    return 0;
+}
